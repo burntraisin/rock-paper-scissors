@@ -47,12 +47,27 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// Get who won in playRound
+function getRoundResult() {
+    let playRoundResult = playRound();
+    if (playRoundResult == "It's a tie! Rock ties rock." || "It's a tie! Paper ties paper." || "It's a tie! Scissors tie scissors.") {
+        return "TIE";
+    }
+}
+
 const playerSelection = "rOck";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 
 function game() {
-    //loop to play 5 rounds
+    let player;
+    let computer;
+    for (let i = 0; i < 5; i++) {
+        let playRoundResult = getRoundResult();
+        if (playRoundResult == "PLAYER WON") {
+
+        }
+    }
     //capture results of each round
-    //
+    //display who won
 }

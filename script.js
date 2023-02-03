@@ -9,7 +9,6 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     let playerSelectionUpper = playerSelection.toUpperCase();
     let computerSelectionUpper = computerSelection.toUpperCase();
-    //if player == rock then check if computer == rock paper or scissors
     if (playerSelectionUpper == "ROCK") {
         if (computerSelectionUpper == "ROCK") {
             console.log("It's a tie! Rock ties rock.");
@@ -24,7 +23,6 @@ function playRound(playerSelection, computerSelection) {
             return "You win! Rock beats scissors.";
         }
     }
-    //if player == paper then check if computer == rock paper or scissors
     if (playerSelectionUpper == "PAPER") {
         if (computerSelectionUpper == "PAPER") {
             console.log("It's a tie! Paper ties paper.");
@@ -39,7 +37,6 @@ function playRound(playerSelection, computerSelection) {
             return "You lose! Scissors beat paper.";
         }
     }
-    //if player == scissors then check if computer == rock paper or scissors
     if (playerSelectionUpper == "SCISSORS") {
         if (computerSelectionUpper == "SCISSORS") {
             console.log("It's a tie! Scissors tie scissors.");

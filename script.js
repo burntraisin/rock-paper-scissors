@@ -58,7 +58,7 @@ function playRound(playerSelection, computerSelection) {
 
 // Get if the player tied, lost, or won
 function getRoundResult(playerSelection, computerSelection) {
-    let playRoundResult = playRound(playerSelection, computerSelection);
+    let playRoundResult = playRound(playerSelection, computerSelection);    // play one round
     if (playRoundResult === "It's a tie! Rock ties rock." || playRoundResult === "It's a tie! Paper ties paper." || playRoundResult === "It's a tie! Scissors tie scissors.") {
         return "TIE";
     }
@@ -74,11 +74,11 @@ function game() {
     let player = 0;
     let computer = 0;
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {   // plays 5 rounds
         let playerSelection = prompt("Rock, paper, or scissors?");
         let computerSelection = getComputerChoice();
-        let roundResult = getRoundResult(playerSelection, computerSelection);
-        if (roundResult === "TIE") {
+        let roundResult = getRoundResult(playerSelection, computerSelection);   // get player result
+        if (roundResult === "TIE") {    // tracks score between player and computer
             player += 1;
             computer += 1;
         }
@@ -90,7 +90,7 @@ function game() {
         }
     }
 
-    if (player > computer) {
+    if (player > computer) {    // compares scores between player and computer
         console.log("You are the winner!");
     }
     else if (player < computer) {

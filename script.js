@@ -71,7 +71,22 @@ function game() {
     let player = 0;
     let computer = 0;
 
-    for (let i = 0; i < 5; i++) {   // plays 5 rounds
+    const rock = document.querySelector('.rock');
+    rock.addEventListener('click', () => {
+        playRound("rock", getComputerChoice());
+    });
+
+    const paper = document.querySelector('.paper');
+    paper.addEventListener('click', () => {
+        playRound("paper", getComputerChoice());
+    });
+
+    const scissors = document.querySelector('.scissors');
+    scissors.addEventListener('click', () => {
+        playRound("scissors", getComputerChoice());
+    });
+
+/*     for (let i = 0; i < 5; i++) {   // plays 5 rounds
         let playerSelection = prompt("Rock, paper, or scissors?");
         let computerSelection = getComputerChoice();
         let roundResult = getRoundResult(playerSelection, computerSelection);   // get player result
@@ -85,7 +100,7 @@ function game() {
         else if (roundResult === "WON") {
             player += 1;
         }
-    }
+    } */
 
     if (player > computer) {    // compares scores between player and computer
         console.log("You are the winner!");

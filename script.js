@@ -79,6 +79,8 @@ let computerScore = 0;
 playerScoreDisplayContent.textContent = playerScore;
 computerScoreDisplayContent.textContent = computerScore;
 
+const modal = document.querySelector('.modal');
+
 const rock = document.querySelector('.rock');
 rock.addEventListener('click', () => {
     if (playerScore <= 4 && computerScore <= 4) {
@@ -94,12 +96,15 @@ rock.addEventListener('click', () => {
     }
     if (playerScore == 5 || computerScore ==5) {
         if (playerScore > computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You are the winner!";
         }
         else if (playerScore < computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You lost!";
         }
         else if (playerScore == computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You tied with the computer!";
         }
     }
@@ -120,12 +125,15 @@ paper.addEventListener('click', () => {
     }
     if (playerScore == 5 || computerScore ==5) {
         if (playerScore > computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You are the winner!";
         }
         else if (playerScore < computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You lost!";
         }
         else if (playerScore == computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You tied with the computer!";
         }
     }
@@ -146,19 +154,19 @@ scissors.addEventListener('click', () => {
     }
     if (playerScore == 5 || computerScore ==5) {
         if (playerScore > computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You are the winner!";
         }
         else if (playerScore < computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You lost!";
         }
         else if (playerScore == computerScore) {
+            modal.style.display = "block";
             winnerContent.textContent = "You tied with the computer!";
         }
     }
 });
-
-const playAgain = document.querySelector('.play-again');
-playAgain.style.visibility = "hidden";
 
 const buttonResetGame = document.querySelector('.reset-game');
 buttonResetGame.addEventListener('click', () => {

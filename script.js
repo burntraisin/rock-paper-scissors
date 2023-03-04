@@ -11,43 +11,43 @@ function playRound(playerSelection, computerSelection) {
     let computerSelectionUpper = computerSelection.toUpperCase();
     if (playerSelectionUpper == "ROCK") {
         if (computerSelectionUpper == "ROCK") {
-            console.log("It's a tie! Rock ties rock.");
+            resultsContent.textContent = "It's a tie! Rock ties rock.";
             return "It's a tie! Rock ties rock.";
         }
         else if (computerSelectionUpper == "PAPER") {
-            console.log("You lose! Paper beats rock.");
+            resultsContent.textContent = "You lose! Paper beats rock.";
             return "You lose! Paper beats rock.";
         }
         else if (computerSelectionUpper == "SCISSORS") {
-            console.log("You win! Rock beats scissors.");
+            resultsContent.textContent = "You win! Rock beats scissors.";
             return "You win! Rock beats scissors.";
         }
     }
     if (playerSelectionUpper == "PAPER") {
         if (computerSelectionUpper == "PAPER") {
-            console.log("It's a tie! Paper ties paper.");
+            resultsContent.textContent = "It's a tie! Paper ties paper.";
             return "It's a tie! Paper ties paper.";
         }
         else if (computerSelectionUpper == "ROCK") {
-            console.log("You win! Paper beats rock.");
+            resultsContent.textContent = "You win! Paper beats rock.";
             return "You win! Paper beats rock.";
         }
         else if (computerSelectionUpper == "SCISSORS") {
-            console.log("You lose! Scissors beat paper.");
+            resultsContent.textContent = "You lose! Scissors beat paper.";
             return "You lose! Scissors beat paper.";
         }
     }
     if (playerSelectionUpper == "SCISSORS") {
         if (computerSelectionUpper == "SCISSORS") {
-            console.log("It's a tie! Scissors tie scissors.");
+            resultsContent.textContent = "It's a tie! Scissors tie scissors.";
             return "It's a tie! Scissors tie scissors.";
         }
         else if (computerSelectionUpper == "ROCK") {
-            console.log("You lose! Rock beats scissors.");
+            resultsContent.textContent = "You lose! Rock beats scissors.";
             return "You lose! Rock beats scissors.";
         }
         else if (computerSelectionUpper == "PAPER") {
-            console.log("You win! Scissors beat paper.");
+            resultsContent.textContent = "You win! Scissors beat paper.";
             return "You win! Scissors beat paper.";
         }
     }
@@ -114,3 +114,8 @@ function game() {
 }
 
 game();
+
+// Displays results of a round
+const results = document.querySelector('.results');
+const resultsContent = document.createElement('div');
+results.appendChild(resultsContent);

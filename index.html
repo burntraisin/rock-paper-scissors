@@ -9,17 +9,24 @@
         <script src="script.js" defer></script>
         <h1>Rock, Paper, Scissors</h1>
         <p>Play against the computer in a game of rock, paper, scissors. The first to 5 wins!</p>
-        <div class="player-score">You:</div>
-        <div class="computer-score">Computer:</div>
-        <button class="rock"><img src="imgs/rock.svg" alt="rock" width="150">Rock</button>
-        <button class="paper"><img src="imgs/paper.svg" alt="paper" width="150">Paper</button>
-        <button class="scissors"><img src="imgs/scissors.svg" alt="scissors" width="150">Scissors</button>
+        <div class="running-scores">
+            <div class="player-score">You</div>
+            <div class="computer-score">Computer</div>
+        </div>
+        <div class="options">
+            <button class="rock"><img src="imgs/rock.svg" alt="rock" width="150"><br/>ROCK</button>
+            <button class="paper"><img src="imgs/paper.svg" alt="paper" width="150"><br/>PAPER</button>
+            <button class="scissors"><img src="imgs/scissors.svg" alt="scissors" width="150"><br/>SCISSORS</button>
+        </div>
         <div class="results"></div>
         <div class="modal">
             <div class="modal-content">
                 <div class="winner"></div>
                 <button class="reset-game">Play Again</button>
             </div>
+        </div>
+        <div class="footer">
+            <p>made by <a href="https://github.com/burntraisin" target="_blank">burntraisin</a></p>
         </div>
     </body>
 </html>

@@ -1,11 +1,9 @@
-// Computer's choice
 function getComputerChoice() {
     let choicesArray = ["rock", "paper", "scissors"];
     let computerChoice = choicesArray[Math.floor(Math.random() * choicesArray.length)];
     return computerChoice;
 }
 
-// Plays one round
 function playRound(playerSelection, computerSelection) {
     let playerSelectionUpper = playerSelection.toUpperCase();
     let computerSelectionUpper = computerSelection.toUpperCase();
@@ -58,12 +56,12 @@ const results = document.querySelector('.results');
 const resultsContent = document.createElement('div');
 results.appendChild(resultsContent);
 
-// Display player score
+// Display running player score
 const playerScoreDisplay = document.querySelector('.player-score');
 const playerScoreDisplayContent = document.createElement('div');
 playerScoreDisplay.appendChild(playerScoreDisplayContent);
 
-// Display computer score
+// Display running computer score
 const computerScoreDisplay = document.querySelector('.computer-score');
 const computerScoreDisplayContent = document.createElement('div');
 computerScoreDisplay.appendChild(computerScoreDisplayContent);
@@ -77,7 +75,15 @@ let playerScore = 0;
 let computerScore = 0;
 
 playerScoreDisplayContent.textContent = playerScore;
+playerScoreDisplayContent.style.textAlign = 'center';
+playerScoreDisplayContent.style.paddingTop = '20px';
+playerScoreDisplayContent.style.fontSize = '18px';
+playerScoreDisplayContent.style.color = '#c1d228';
 computerScoreDisplayContent.textContent = computerScore;
+computerScoreDisplayContent.style.textAlign = 'center';
+computerScoreDisplayContent.style.paddingTop = '20px';
+computerScoreDisplayContent.style.fontSize = '18px';
+computerScoreDisplayContent.style.color = '#c1d228';
 
 const modal = document.querySelector('.modal');
 

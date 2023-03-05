@@ -66,7 +66,7 @@ const computerScoreDisplay = document.querySelector('.computer-score');
 const computerScoreDisplayContent = document.createElement('div');
 computerScoreDisplay.appendChild(computerScoreDisplayContent);
 
-// Display winner
+// Display final winner
 const winner = document.querySelector('.winner');
 const winnerContent = document.createElement('div');
 winner.appendChild(winnerContent);

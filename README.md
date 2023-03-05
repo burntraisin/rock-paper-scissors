@@ -15,3 +15,4 @@ Here's the [live link](https://burntraisin.github.io/rock-paper-scissors/)!
 
 * Make the game responsive
 * Ensure accessibility
+* Make buttons feel more clickable

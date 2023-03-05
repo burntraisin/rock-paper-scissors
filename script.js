@@ -89,8 +89,14 @@ const modal = document.querySelector('.modal');
 
 const rock = document.querySelector('.rock');
 rock.addEventListener('click', () => {
+    paper.style.borderColor = "transparent";
+    scissors.style.borderColor = "transparent";
+    rock.style.transition = "border 250ms ease-out";
+    rock.style.borderColor = "#8bac0f";
+    rock.style.borderStyle = "solid";
+    let computerChoice = getComputerChoice();
     if (playerScore <= 4 && computerScore <= 4) {
-        let roundResult = playRound("rock", getComputerChoice());
+        let roundResult = playRound("rock", computerChoice);
         if (roundResult == 1) {
             computerScore += 1;
         }
@@ -100,17 +106,35 @@ rock.addEventListener('click', () => {
         playerScoreDisplayContent.textContent = playerScore;
         computerScoreDisplayContent.textContent = computerScore;
     }
+
+    // Show what computer chose
+    if (computerChoice == "paper") {
+        paper.style.transition = "border 250ms ease-out";
+        paper.style.borderStyle = "dashed";
+        paper.style.borderColor = "#8bac0f";
+    }
+    if (computerChoice == "scissors") {
+        scissors.style.transition = "border 250ms ease-out";
+        scissors.style.borderStyle = "dashed";
+        scissors.style.borderColor = "#8bac0f";
+    }
+    if (computerChoice == "rock") {
+        rock.style.transition = "border 250ms ease-out";
+        rock.style.borderStyle = "solid dashed";
+        rock.style.borderColor = "#8bac0f";
+    }
+
     if (playerScore == 5 || computerScore ==5) {
         if (playerScore > computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You are the winner!";
         }
         else if (playerScore < computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You lost!";
         }
         else if (playerScore == computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You tied with the computer!";
         }
     }
@@ -118,8 +142,14 @@ rock.addEventListener('click', () => {
 
 const paper = document.querySelector('.paper');
 paper.addEventListener('click', () => {
+    rock.style.borderColor = "transparent";
+    scissors.style.borderColor = "transparent";
+    paper.style.transition = "border 250ms ease-out";
+    paper.style.borderColor = "#8bac0f";
+    paper.style.borderStyle = "solid";
+    let computerChoice = getComputerChoice();
     if (playerScore <= 4 && computerScore <= 4) {
-        let roundResult = playRound("paper", getComputerChoice());
+        let roundResult = playRound("paper", computerChoice);
         if (roundResult == 1) {
             computerScore += 1;
         }
@@ -129,17 +159,35 @@ paper.addEventListener('click', () => {
         playerScoreDisplayContent.textContent = playerScore;
         computerScoreDisplayContent.textContent = computerScore;
     }
+    
+    // Show what computer chose
+    if (computerChoice == "scissors") {
+        scissors.style.transition = "border 250ms ease-out";
+        scissors.style.borderStyle = "dashed";
+        scissors.style.borderColor = "#8bac0f";
+    }
+    if (computerChoice == "rock") {
+        rock.style.transition = "border 250ms ease-out";
+        rock.style.borderStyle = "dashed";
+        rock.style.borderColor = "#8bac0f";
+    }
+    if (computerChoice == "paper") {
+        paper.style.transition = "border 250ms ease-out";
+        paper.style.borderStyle = "solid dashed";
+        paper.style.borderColor = "#8bac0f";
+    }
+
     if (playerScore == 5 || computerScore ==5) {
         if (playerScore > computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You are the winner!";
         }
         else if (playerScore < computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You lost!";
         }
         else if (playerScore == computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You tied with the computer!";
         }
     }
@@ -147,8 +195,14 @@ paper.addEventListener('click', () => {
 
 const scissors = document.querySelector('.scissors');
 scissors.addEventListener('click', () => {
+    rock.style.borderColor = "transparent";
+    paper.style.borderColor = "transparent";
+    scissors.style.transition = "border 250ms ease-out";
+    scissors.style.borderColor = "#8bac0f";
+    scissors.style.borderStyle = "solid";
+    let computerChoice = getComputerChoice();
     if (playerScore <= 4 && computerScore <= 4) {
-        let roundResult = playRound("scissors", getComputerChoice());
+        let roundResult = playRound("scissors", computerChoice);
         if (roundResult == 1) {
             computerScore += 1;
         }
@@ -158,17 +212,35 @@ scissors.addEventListener('click', () => {
         playerScoreDisplayContent.textContent = playerScore;
         computerScoreDisplayContent.textContent = computerScore;
     }
+
+    // Show what computer chose
+    if (computerChoice == "rock") {
+        rock.style.transition = "border 250ms ease-out";
+        rock.style.borderStyle = "dashed";
+        rock.style.borderColor = "#8bac0f";
+    }
+    if (computerChoice == "paper") {
+        paper.style.transition = "border 250ms ease-out";
+        paper.style.borderStyle = "dashed";
+        paper.style.borderColor = "#8bac0f";
+    }
+    if (computerChoice == "scissors") {
+        scissors.style.transition = "border 250ms ease-out";
+        scissors.style.borderStyle = "solid dashed";
+        scissors.style.borderColor = "#8bac0f";
+    }
+
     if (playerScore == 5 || computerScore ==5) {
         if (playerScore > computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You are the winner!";
         }
         else if (playerScore < computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You lost!";
         }
         else if (playerScore == computerScore) {
-            modal.style.display = "block";
+            modal.style.display = "flex";
             winnerContent.textContent = "You tied with the computer!";
         }
     }
